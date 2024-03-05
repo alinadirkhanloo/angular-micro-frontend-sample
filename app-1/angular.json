@@ -11,9 +11,12 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
-            "outputPath": "dist/app-1",
+            "customWebpackConfig":{
+              "path":"./webpack.config.js"
+            },
+            "outputPath": "dist/micro-app-1",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
